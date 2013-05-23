@@ -50,7 +50,7 @@ while(my $full_len = sysread(FH,my $fh_data,$read_size)) {
        }
      }
      # Turn non printable chars to .
-     #$sub_data =~ tr/[\x0-\x1f\x7f-\xff]/./;
+     $sub_data =~ tr/[\x0-\x1f\x7f-\xff]/./;
      print " |$sub_data|";
      print "\n";
    }
